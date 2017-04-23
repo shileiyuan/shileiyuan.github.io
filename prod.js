@@ -17,17 +17,17 @@ module.exports = function (env) {
   return webpackMerge(commonConfig(env), {
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: '[name].[chunkhash].js'
-      // publicPath: '/m'
+      filename: '[name].[chunkhash].js',
+      publicPath: '/'
     },
     plugins: [
       new webpack.optimize.UglifyJsPlugin(),
       new HtmlWebpackPlugin({
-        //相对的是build目录
+        //filename相对的是build目录
         filename: '../index.html',
         hash: true,
-        template: path.resolve('./assets/templates/index.html'),
-        favicon: path.resolve('./assets/images/favicon.ico')
+        template: './assets/templates/index.html',
+        favicon: './assets/images/favicon.ico'
       })
     ]
   })

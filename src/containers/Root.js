@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { Route, IndexRoute, Redirect, Router } from 'react-router';
 import App from './App';
 import NotFound from '../components/NotFound';
+import HelloWorld from '../components/HelloWorld';
 
 const Main = ({children}) => children;
 
@@ -19,6 +20,7 @@ export default class Root extends React.Component {
         <Router history={history}>
           <Route path='/' component={Main}>
             <IndexRoute component={App} />
+            <Route component={HelloWorld} path="/hello" />
             <Route component={NotFound} path="*" />
           </Route>
         </Router>

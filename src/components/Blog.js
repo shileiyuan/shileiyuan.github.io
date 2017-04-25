@@ -4,7 +4,8 @@ import marked from 'marked';
 import hljs from 'highlight.js';
 
 class Blog extends React.Component {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
     marked.setOptions({
       highlight: code => {
         return hljs.highlightAuto(code).value;
@@ -15,7 +16,7 @@ class Blog extends React.Component {
     const issues = this.props.issues;
     const id = parseInt(this.props.params.id);
     const index = issues.findIndex(issue => issue.id === id);
-    
+
     let issue = issues[index];
 
     const html = typeof issue === 'undefined' ? marked('_什么都没有_') : marked(issue.body)

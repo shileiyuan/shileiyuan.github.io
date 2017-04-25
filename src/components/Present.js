@@ -6,10 +6,10 @@ export default class Present extends React.Component {
     return (
       <div>
         <h1>Present</h1>
-        <div>
-          <Link to="hello">hello</Link>
-          <Link to="blog-list">博客列表</Link>
-        </div>
+        <ul>
+          <li><Link to="hello">hello</Link></li>
+          <li><Link to="blog-list">博客列表</Link></li>
+        </ul>
       </div>
     )
   }

@@ -26,8 +26,8 @@ module.exports = function (env) {
         //filename相对的是build目录
         filename: '../index.html',
         hash: true,
-        template: './assets/templates/index.html'
-        // favicon: './assets/images/favicon.ico'
+        template: './assets/templates/index.html',
+        favicon: './assets/images/favicon.ico'
       })
     ]
   })

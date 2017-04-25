@@ -10,7 +10,10 @@ class App extends React.Component {
 
     return (
       <div>
-        <Link to="hello">hello</Link>
+        <div>
+          <Link to="/">返回首页</Link>
+        </div>
+        {this.props.children}
       </div>
     );
   }

@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import marked from 'marked';
 import hljs from 'highlight.js';
+import { getIssueIfNeeded } from '../actions/issueAction';
+import { issueUrl } from '../configures/constant';
 
 class Blog extends React.Component {
   constructor(props) {
@@ -11,6 +13,9 @@ class Blog extends React.Component {
         return hljs.highlightAuto(code).value;
       }
     });
+  }
+  componentDidMount(){
+    this.props.dispatch(getIssueIfNeeded(issueUrl))
   }
   render() {
     const issues = this.props.issues;

@@ -27,7 +27,7 @@ module.exports = function (env) {
         filename: '../index.html',
         hash: true,
         template: './assets/templates/index.html',
-        favicon: './assets/images/favicon.ico'
+        favicon: './favicon.ico'
       })
     ]
   })

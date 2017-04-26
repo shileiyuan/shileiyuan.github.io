@@ -11,17 +11,17 @@ module.exports = function (env) {
     devtool: 'source-map',
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: '[name].js',
-      publicPath: '/'
+      filename: '[name].js'
+      // publicPath: '/'
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin(),
       new HtmlWebpackPlugin({
-        filename: 'index.html',
+        filename: './index.html',
         hash: true,
-        template: path.resolve('./assets/templates/index.html'),
-        favicon: path.resolve('./assets/images/favicon.ico')
+        template: './assets/templates/index.html',
+        favicon: './favicon.ico'
       })
     ],
     devServer: {

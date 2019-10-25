@@ -1,12 +1,6 @@
-const path = require('path');
-const webpack = require('webpack');
-
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const { srcPath } = require('./utils')
 
 module.exports = function (env) {
-
   return {
     mode: env,
 
@@ -17,19 +11,9 @@ module.exports = function (env) {
     resolve: {
       extensions: ['.js', '.jsx', '.json'],
       alias: {
-        '~': srcPath()
+        '@': srcPath()
       }
     },
-
-    plugins: [
-      // new webpack.ProgressPlugin(),
-      new HtmlWebpackPlugin({
-        filename: 'index.html',
-        title: 'Henson\'s Blog',
-        template: srcPath('assets/template/index.html')
-      })
-    ],
-
     module: {
       rules: [
         {
@@ -40,17 +24,21 @@ module.exports = function (env) {
 
         {
           test: /\.less$/,
+          // include: [srcPath()],
           use: [
             {
-              loader: 'style-loader',
+              loader: 'style-loader'
             },
             {
-              loader: 'css-loader',
+              loader: 'css-loader'
             },
             {
               loader: 'less-loader',
-            },
-          ],
+              options: {
+                javascriptEnabled: true
+              }
+            }
+          ]
         },
 
         {
@@ -66,4 +54,3 @@ module.exports = function (env) {
     }
   }
 }
-

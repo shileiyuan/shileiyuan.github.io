@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Main from './Main'
+import App from './App'
 
-function render(Component) {
+function render (Component) {
   ReactDOM.render(<Component />, document.getElementById('root'))
 }
 
-render(Main)
+render(App)
 
-if(module.hot) {
-  module.hot.accept('./Main', () => {
-    render(Main)
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    render(App)
   })
 }

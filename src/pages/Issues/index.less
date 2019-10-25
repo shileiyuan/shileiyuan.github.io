@@ -1,0 +1,88 @@
+@import '~@uyun/everest-styles/index';
+
+@transfer-bg: @white, @deep-list-1;
+@search-bg: @gray-top, @deep-top;
+@common-border-color: #e6eaef, @deep-line;
+@tag-bg: @white, @deep-card;
+@tag-border-color: @gray-outline, @deep-outline;
+
+.transfer-modal {
+  .uyun-modal-body {
+    padding: 20px;
+  }
+}
+
+.import-app-transfer {
+  display: flex;
+  background-color: @transfer-bg;
+  .transfer-table-wrap {
+    display: flex;
+    height: 519px;
+    overflow: auto;
+    flex-flow: column nowrap;
+    border: 1px solid @common-border-color;
+    width: 46.875%;
+    .uyun-table-body > table,
+    .uyun-table-placeholder {
+      border-left: none;
+      border-right: none;
+    }
+    .uyun-table-tbody > tr {
+      background-color: @transfer-bg;
+      & > td {
+        padding: 8px;
+        margin: 8px;
+      }
+    }
+    .uyun-table-thead > tr > th {
+      padding: 9px 8px;
+      background-color: @search-bg;
+    }
+    .uyun-table-wrapper {
+      flex-grow: 1;
+    }
+    .uyun-pagination {
+      margin: 12px;
+      align-self: flex-end;
+    }
+    .uyun-tag {
+      background: @tag-bg;
+      border: 1px solid @tag-border-color;
+    }
+  }
+  .transfer-search {
+    background-color: @search-bg;
+    overflow: hidden;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid @common-border-color;
+    flex-shrink: 0;
+    &-input {
+      width: 200px;
+      height: 24px;
+      line-height: 24px;
+    }
+    &-tip {
+      float: right;
+      height: 24px;
+      line-height: 24px;
+    }
+  }
+  .transfer-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 6.25%;
+    border-top: 1px solid @common-border-color;
+    border-bottom: 1px solid @common-border-color;
+    button {
+      width: 44px;
+      height: 44px;
+      font-size: 20px;
+      &:first-child {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

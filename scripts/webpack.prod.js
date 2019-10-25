@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const path = require('path')
 const webpackMerge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -12,13 +11,14 @@ module.exports = function (env) {
   return webpackMerge(baseConfig(env), {
     output: {
       filename: '[name].[chunkhash].js',
-      path: path.join(__dirname, '../build'),
+      path: path.join(__dirname, '../build')
     },
     plugins: [
       new HtmlWebpackPlugin({
         filename: '../index.html',
         title: 'Henson\'s Blog',
         template: srcPath('assets/template/index.html'),
+        favicon: path.join(__dirname, '../favicon.ico')
       })
     ],
     optimization: {
@@ -34,6 +34,6 @@ module.exports = function (env) {
         minSize: 30000,
         name: true
       }
-    },
+    }
   })
 }

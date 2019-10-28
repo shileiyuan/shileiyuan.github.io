@@ -13,8 +13,8 @@ export default function App() {
       <MainLayout>
         <Switch>
           <Redirect from='/' to='/Demo' exact />
-          <Route path='/Demo' component={Demo} exact />
-          <Route path='/Issues' component={Issues} exact />
+          <Route path='/Demo' component={Demo} />
+          <Route path='/Issues' component={Issues} />
         </Switch>
       </MainLayout>
     </Router>

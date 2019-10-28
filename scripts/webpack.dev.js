@@ -15,7 +15,7 @@ module.exports = function (env) {
     plugins: [
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        title: 'Henson\'s Blog',
+        title: "Henson's Blog",
         template: srcPath('assets/template/index.html'),
         favicon: path.join(__dirname, '../favicon.ico')
       })
@@ -24,7 +24,13 @@ module.exports = function (env) {
       // open: true
       hot: true,
       host: HOST,
-      port: PORT
+      port: PORT,
+      proxy: {
+        '/api': {
+          target: 'http://127.0.0.1:7001',
+          pathRewrite: { '^/api': '' }
+        }
+      }
     }
   })
 }

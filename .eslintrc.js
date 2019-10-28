@@ -21,7 +21,7 @@ module.exports = {
   },
   extends: [
     'standard',
-    'standard-react',
+    'standard-react'
     // 如果eslint的规则于prettier的规则冲突，这个插件会让eslint的规则失效，以prettier的规则为准
     // 所以这些冲突的规则只需要在prettier中定义就行了，下面的rules里面不需要重新写一遍了
     // 'plugin:prettier/recommended'
@@ -33,6 +33,7 @@ module.exports = {
     'no-console': isProd ? 'error' : 'off',
     'no-debugger': isProd ? 'error' : 'off',
     'react/prop-types': 'off',
-    'space-before-function-paren': 'off'
+    'space-before-function-paren': 'off',
+    'quote-props': ['error', 'consistent']
   }
 }

@@ -3,5 +3,5 @@ module.exports = {
     ['@babel/preset-env', { modules: false, useBuiltIns: 'usage' }],
     '@babel/preset-react'
   ],
-  plugins: ['syntax-dynamic-import']
+  plugins: ['syntax-dynamic-import', '@babel/plugin-proposal-class-properties']
 }

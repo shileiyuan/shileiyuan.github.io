@@ -1,38 +1,24 @@
-import { addUrlParams } from './common'
-import request from './request'
-
-const API_BASE = '/api'
 
 const API = {
   get: {
-    queryUsers: '/user/list'
+    queryUsers: '/table',
+    queryTable: '/table'
   },
   post: {
 
   }
 }
 
-const methods = ['get', 'post']
-
 const mix = (api, base = '') => {
+  const methods = Object.keys(api)
   methods.forEach(method => {
     const obj = api[method]
     Object.entries(obj).forEach(([key, value]) => {
-      obj[key] = (data, { urls = [], params = {} } = {}) => {
-        const url = base + value + urls.join('/')
-        switch (method) {
-          case 'get':
-            return request.get(url, { params: { ...data, ...params } })
-          case 'post':
-            return request.post(addUrlParams(url, params), data)
-          default:
-          // 不应该执行
-        }
-      }
+      obj[key] = base + value
     })
   })
 }
 
-mix(API, API_BASE)
+mix(API)
 
 export { API, API as default }

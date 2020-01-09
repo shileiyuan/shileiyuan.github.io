@@ -3,8 +3,13 @@ import { Layout, Menu } from 'antd'
 import { Link, Switch, Route, useRouteMatch, Redirect } from 'react-router-dom'
 import Users from './Users'
 import Count from './Count'
+import Count2 from './Count2'
+import Count3 from './Count3'
 import Refs from './Refs'
 import Diagram from './Diagram'
+import Func from './Func'
+import Measure from './Measure'
+import Keep from './Keep'
 import './index.less'
 
 const { Sider, Content } = Layout
@@ -19,12 +24,32 @@ const menus = [
     Component: Count
   },
   {
+    key: 'Count2',
+    Component: Count2
+  },
+  {
+    key: 'Count3',
+    Component: Count3
+  },
+  {
     key: 'Refs',
     Component: Refs
   },
   {
     key: 'Diagram',
     Component: Diagram
+  },
+  {
+    key: 'Func',
+    Component: Func
+  },
+  {
+    key: 'Measure',
+    Component: Measure
+  },
+  {
+    key: 'Keep',
+    Component: Keep
   }
 ]
 

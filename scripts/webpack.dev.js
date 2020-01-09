@@ -7,10 +7,10 @@ const utils = require('./utils')
 const { srcPath } = utils
 
 const HOST = '0.0.0.0'
-const PORT = 3000
+const PORT = 3203
 
 module.exports = function (env) {
-  return webpackMerge(baseConfig(env), {
+  const config = {
     devtool: 'eval-source-map',
     plugins: [
       new HtmlWebpackPlugin({
@@ -32,5 +32,6 @@ module.exports = function (env) {
         }
       }
     }
-  })
+  }
+  return webpackMerge(baseConfig(env), config)
 }

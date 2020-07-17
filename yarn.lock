@@ -4306,9 +4306,9 @@ lodash.throttle@^4.0.0:
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
 lodash@^4.16.5, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5:
-  version "4.17.15"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.15.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 loglevel@^1.6.4:
   version "1.6.4"
@@ -7263,15 +7263,7 @@ urix@^0.1.0:
   resolved "https://registry.npm.taobao.org/urix/download/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
-url-parse@^1.4.3:
-  version "1.4.7"
-  resolved "https://registry.npm.taobao.org/url-parse/download/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
-  integrity sha1-qKg1NejACjFuQDpdtKwbm4U64ng=
-  dependencies:
-    querystringify "^2.1.1"
-    requires-port "^1.0.0"
-
-url-parse@^1.4.7:
+url-parse@^1.4.3, url-parse@^1.4.7:
   version "1.4.7"
   resolved "http://rnpm.uyundev.cn/url-parse/download/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
   integrity sha1-qKg1NejACjFuQDpdtKwbm4U64ng=
